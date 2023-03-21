@@ -10,9 +10,12 @@ const getEldadInfo = async (req, res) => {
     })
     .catch((err) => res.status(400).json({ success: false, err }));
 };
-
+const createInfo = (req, res) => {
+  create(req, res, EldadModel);
+};
 
 
 module.exports = {
-  getEldadInfo
+  getEldadInfo,
+  createInfo
 }
